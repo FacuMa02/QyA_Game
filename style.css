@@ -1,56 +1,63 @@
 * {
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
 body {
-  background-color: #ffe53b;
-  background-image: linear-gradient(147deg, #ffe53b 0%, #ff2525 74%);
-  padding: 0;
-  margin: 0;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  margin: 2;
+  background-size: cover;
+  background-repeat: repeat-y;
+  width: 100%;
+  height: 100%;
   text-align: center;
-  font-family: Trebuchet MS;
+  font-family: "Courier New", Courier, monospace;
   font-size: 120%;
 }
 .container {
-  width: 98vw;
-  height: 97vh;
+  width: 100%;
+  height: 100%;
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid white;
 }
 .header {
   background: rgb(255, 255, 255);
   min-width: 300px;
-  max-width: 600px;
+  max-width: 700px;
   width: 70%;
   padding: 10px;
-  border-radius: 12.5px;
+  border-radius: 10px;
+  margin-bottom: 1vh;
 }
 .category {
-  color: rgb(222, 77, 37);
+  color: #8884ff;
   font-weight: bold;
-  text-align: left;
+  text-align: center;
+  font-size: 30px;
 }
 .question {
   padding: 10px;
+  font-size: 23px;
   font-weight: bold;
+  margin: 5px;
 }
 .image {
-  object-fit: contain;
-  height: 200px;
-  width: 80%;
+  object-fit: cover;
+  height: 300px;
+  width: 300px;
+  /* margin: 2px; */
 }
 .btn {
   background: white;
   width: 60%;
   max-width: 550px;
   padding: 10px;
-  margin: 5px;
-  border-radius: 25px;
+  margin: 1vh;
+  border-radius: 12.5px;
+  font-size: 20px;
 }
 .btn:hover {
-  background: orange;
+  background: #5863f8;
   cursor: pointer;
   transform: scale(1.05);
 }

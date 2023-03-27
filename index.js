@@ -8,11 +8,24 @@ let btn_correspondiente = [
   select_id("btn3"),
   select_id("btn4"),
 ];
+var contador = 0;
+var level = 0;
+interprete_bp = interprete_bp.sort(() => {
+  return Math.random() - 0.5;
+});
 
 selectRandomQuestion();
 
 function selectRandomQuestion() {
-  selectQuestion(Math.floor(Math.random() * interprete_bp.length));
+  selectQuestion(level);
+  level += 1;
+  checkFinal(level);
+}
+
+function checkFinal(lev) {
+  if (lev === 24) {
+    return window.alert("¡FIN DEL JUEGO!\nNumero de aciertos: " + contador);
+  }
 }
 
 function selectQuestion(n) {
@@ -48,12 +61,13 @@ function desordenarRespuestas(question) {
 function oprimir_btn(i) {
   if (posiblesResp[i] == question.respuesta) {
     btn_correspondiente[i].style.background = "lightgreen";
+    contador += 1;
   } else {
     btn_correspondiente[i].style.background = "red";
   }
   setTimeout(() => {
     reiniciar();
-  }, 2000);
+  }, 1000);
 }
 
 function reiniciar() {
